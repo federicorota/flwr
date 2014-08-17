@@ -21,9 +21,12 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
-  # adapter: postgresql
-  # host: localhost
-  # username: user
-  # database: app-dev
+  # <<: *default
+  # database: db/production.sqlite3
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: ddmvhufhmnoejr
+  pool: 5
+  username:
+  password:
