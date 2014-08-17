@@ -1,0 +1,29 @@
+.container
+  %h1 New User Registration
+  %hr/ 
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {role: 'form'}) do |f|
+    - unless resource.errors.empty?
+      .alert.alert-danger.alert-dismissible{role: 'alert'}
+        = devise_error_messages!
+    .form-group
+      = f.label :username
+      = f.text_field :username, class: 'form-control'
+    .form-group
+      = f.label :first_name
+      = f.text_field :first_name, class: 'form-control'
+    .form-group
+      = f.label :last_name
+      = f.text_field :last_name, class: 'form-control'
+    .form-group
+      = f.label :email
+      = f.email_field :email, autofocus: true, class: 'form-control'
+    .form-group
+      = f.label :password
+      = f.password_field :password, autocomplete: "off", class: 'form-control'
+    .form-group
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+    %hr/ 
+    = f.submit "Sign up", class: 'btn btn-primary btn-block'
+    %hr/ 
+  = render "devise/shared/links"
