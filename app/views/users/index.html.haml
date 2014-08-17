@@ -1,0 +1,18 @@
+.container
+  - @user.each do |u|
+    .well
+      %p 
+        Id:
+        %strong= u.id
+      %p
+        First Name: 
+        %strong= u.first_name
+      %p
+        Last Name:
+        %strong= u.last_name
+      %p 
+        Email:
+        %strong= u.email
+      %p
+        Username:
+        %strong= u.username

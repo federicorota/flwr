@@ -1,0 +1,11 @@
+.container
+  %h1= current_user.first_name + ' ' + current_user.last_name
+  %p
+    Email: 
+    %strong= current_user.email
+  %p
+    Joined on:
+    %strong= current_user.created_at
+  %p 
+    Your last login:
+    %strong= current_user.last_sign_in_at
