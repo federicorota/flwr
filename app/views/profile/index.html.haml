@@ -9,3 +9,5 @@
   %p 
     Your last login:
     %strong= current_user.last_sign_in_at
+  %p
+    = link_to 'Edit', edit_user_registration_path, class: 'btn btn-primary'

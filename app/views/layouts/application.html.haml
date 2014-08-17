@@ -23,7 +23,7 @@
         .collapse.navbar-collapse#navbar-collapse-1
           %ul.nav.navbar-nav.navbar-right
             %li
-              = link_to 'Profile', '/profile'
+              = link_to 'Profile', '/profile' if user_signed_in?
             %li 
               - if user_signed_in?
                 %p.navbar-text.navbar-right
